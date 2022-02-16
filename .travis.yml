@@ -1,20 +1,26 @@
 language: python
 
-python:
-  - 2.7
-  - 3.4
-  - 3.5
-  - 3.6
-  - 3.7
-  - 3.8
-  - 3.9
-  - 3.10
+dist: focal
+
+matrix:
+  include:
+    - python: 3.5
+    - python: 3.6
+    - python: 3.7
+    - python: 3.8
+    - python: 3.9
+      dist: bionic
+    - python: 3.10
+      dist: bionic
 
 install:
   - pip install -r requirements-dev.txt
 
+env:
+  - CI=true
+
 script:
-  - pytest
+  - pytest -v
 
 notifications:
   email: false
