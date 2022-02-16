@@ -18,8 +18,8 @@ install:
   - pip install -r requirements-travis.txt
   - python3 setup.py install
 
-env:
-  - CI=true
+#env:
+#  - CI=true
 
 script:
   - pytest -v --cov -c pytest-travisci.ini tests
