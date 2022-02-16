@@ -15,13 +15,17 @@ matrix:
 
 install:
   - pip install -r requirements-dev.txt
+  - pip install -r requirements-travis.txt
   - python3 setup.py install
 
 env:
   - CI=true
 
 script:
-  - pytest -v
+  - pytest -v --cov -c pytest-travisci.ini tests
+
+after_success:
+  - codecov
 
 notifications:
   email: false
