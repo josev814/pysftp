@@ -54,6 +54,11 @@ Tested on Python 3.4, 3.5, 3.7, 3.8, 3.9, 3.10
     :target: https://travis-ci.org/josev814/denyhosts.svg?branch=master
     :alt: Build Status
 
+CodeCov
+-------
+.. image:: https://codecov.io/gh/josev814/pysftp/branch/master/graph/badge.svg
+  :target: https://codecov.io/gh/josev814/pysftp
+
 
 Links
 _____
