@@ -15,6 +15,7 @@ matrix:
 
 install:
   - pip install -r requirements-dev.txt
+  - python3 setup.py install
 
 env:
   - CI=true
